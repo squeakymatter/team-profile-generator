@@ -31,3 +31,6 @@ GIVEN a command-line application that accepts user input
   ## Mockup
   
   ![Mockup](mockup.png)
+  
+  ## Walkthrough Video
+  https://youtu.be/jI9zNqwGjVI
