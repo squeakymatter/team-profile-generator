@@ -204,7 +204,7 @@ function generateHtml() {
       moreInfo = `School: ${teammate.school}`
     }
     if (teammate.github) {
-      moreInfo = `GitHub: <span><a href="https://github.com/${teammate.github}">${teammate.github}</a>`
+      moreInfo = `GitHub: <span><a href="https://github.com/${teammate.github}" target="_blank">${teammate.github}</a>`
     }
     let teammateCard = `
     <div class="col-sm-4 pb-4">
