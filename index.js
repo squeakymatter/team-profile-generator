@@ -49,7 +49,6 @@ function createTeam() {
         response.officeNumber
       )
       team.push(manager)
-      console.log(team)
       createTeamMember()
     })
 }
@@ -71,10 +70,8 @@ function createTeamMember() {
     ])
     .then((response) => {
       if (response.teamMember === 'Engineer') {
-        console.log('Engineer was selected')
         addEngineer()
       } else if (response.teamMember === 'Intern') {
-        console.log('Intern was selected')
         addIntern()
       } else if (
         response.teamMember === "I don't want to add any more team members"
@@ -152,7 +149,6 @@ function addIntern() {
         response.school
       )
       team.push(intern)
-      console.log(team)
       createTeamMember()
     })
 }
@@ -208,7 +204,7 @@ function generateHtml() {
       moreInfo = `School: ${teammate.school}`
     }
     if (teammate.github) {
-      moreInfo = `GitHub: <span><a href="https://github.com/${teammate.github}">${teammate.github}`
+      moreInfo = `GitHub: <span><a href="https://github.com/${teammate.github}">${teammate.github}</a>`
     }
     let teammateCard = `
     <div class="col-sm-4 pb-4">
@@ -218,8 +214,8 @@ function generateHtml() {
         <p class="card-text">${teammate.role}</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: <span>Employee ID: ${teammate.id}</span></li>
-        <li class="list-group-item">Email: <span><a href="mailto:${teammate.email}">${teammate.email}</a></span></li>
+        <li class="list-group-item">Employee ID: <span>${teammate.id}</span></li>
+        <li class="list-group-item">Email: <span><a href="mailto:${teammate.email}" target="_blank">${teammate.email}</a></span></li>
         <li class="list-group-item">${moreInfo}</li>
       </ul>
     </div>

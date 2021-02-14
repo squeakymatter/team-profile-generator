@@ -12,3 +12,9 @@ test("Get intern's role", () => {
   const intern = new Intern('Mary', 3, 'mary@foo.test', 'UC Berkeley')
   expect(intern.getRole()).toBe(role)
 })
+
+test("Get intern's icon", () => {
+  const internIcon = 'user-graduate'
+  const intern = new Intern('Mary', 3, 'mary@foo.test', 'UC Berkeley')
+  expect(intern.getIcon()).toBe(internIcon)
+})
