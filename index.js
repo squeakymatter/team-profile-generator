@@ -4,9 +4,6 @@ const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 const Manager = require('./lib/Manager')
 
-// WHEN I decide to finish building my team
-// THEN I exit the application, and the HTML is generated
-
 const team = []
 
 const managerIcon = 'mug-hot'
